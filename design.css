@@ -108,7 +108,7 @@ div.line[data-line-type="action"] .sender {
 
 body[data-view-type="channel"] .event .message {
 	color: #A7ADBA;
-    	background: #efefef;
+    	background: #ffffff;
 }
 
 .event .message:before {
