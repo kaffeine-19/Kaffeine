@@ -1,0 +1,55 @@
+
+/* Images */
+
+.inlineImage,
+.inlineVideo,
+.inlineVideoService {
+	margin-top: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+.inlineImage .content,
+.inlineVideo .content,
+.inlineVideoService .content,
+.inlineHTML .content {
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+	margin-left: 10px;
+	min-width: 40px;
+	max-width: 90%;
+}
+
+.inlineImage .closeButton,
+.inlineVideo .closeButton,
+.inlineVideoService .closeButton,
+.inlineHTML .closeButton {
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+	/* border-radius: 5px; */
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+	/* border: 2px solid #a1a1a1; */
+	/* color: #a1a1a1; */
+    background: #A1A1A1;
+    color: #CECECE;
+	display: inline-block;
+	line-height: 14px;
+	font-size: 15px;
+	font-family: "Helvetica Neue" !important;
+	/* text-indent: 7px; */
+    text-align: center;
+	width: 16px;
+	height: 16px;
+	float: left;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+body[data-system-version=^"10.9"] .inlineImage .closeButton,
+body[data-system-version=^"10.9"] .inlineVideo .closeButton,
+body[data-system-version=^"10.9"] .inlineVideoService .closeButton,
+body[data-system-version=^"10.9"] .inlineHTML .closeButton {
+	line-height: 13px;
+}
