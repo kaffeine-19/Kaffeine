@@ -106,6 +106,12 @@ div.line[data-line-type="action"] .sender {
     	background: #efefef;
 }
 
+div.line[data-line-type="action"] .time {
+	/* padding-right: 2px; */
+    	font-style: none;
+    	background: #ffffff;
+}
+
 body[data-view-type="channel"] .event .message {
 	color: #A7ADBA;
     	background: #ffffff;
@@ -115,13 +121,13 @@ body[data-view-type="channel"] .event .message {
 	content: '» ';
 }
 
-div.line[data-line-type="action"] .sender:before {
+div.line[data-line-type="action"] .message:before {
 	content: "• ";
 }
 
 body[data-view-type="server"] .event .message {
 	color: #A7ADBA;
-    	background: #efefef;
+    	background: #ffffff;
 	font-size: inherit;
 	padding-left: 1em;
 	padding-right: 2em;
