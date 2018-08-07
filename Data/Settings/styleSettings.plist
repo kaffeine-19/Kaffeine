@@ -7,9 +7,9 @@
 	<key>Indentation Offset</key>
 	<integer>6</integer>
 	<key>Nickname Color Style</key>
-	<string>HSL-dark</string>
+	<string>HSL-light</string>
 	<key>Nickname Format</key>
-	<string>%@%n</string>
+	<string><%@%n></string>
 	<key>Template Engine Versions</key>
 	<dict>
 		<key>default</key>
