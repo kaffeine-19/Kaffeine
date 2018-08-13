@@ -100,6 +100,7 @@ body[data-view-type="channel"] .event .time {
 	background: #ffffff;
 	color: #4271ae;
 	white-space: nowrap;
+	opacity: 0.6;
 }
 
 body[data-view-type="channel"] .event .sender {
