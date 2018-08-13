@@ -113,8 +113,8 @@ body[data-view-type="sender"] .sender {
 
 div.line {
 	display: flex;
-	/*display: -webkit-flex;*/
-	/*flex-flow: row;*/
+	display: -webkit-flex;
+	flex-flow: row;
 	-webkit-flex-flow: row;
 }
 
