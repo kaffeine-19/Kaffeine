@@ -53,8 +53,7 @@ a:hover {
 }
 
 .message,
-.sender,
-.time {
+.sender {
 	padding: 4px 8px 3px;
 }
 
@@ -65,10 +64,11 @@ a:hover {
 
 .time {
 	flex-shrink: 0;
+	white-space: nowrap;
 	background: #ffffff;
 	color: #4271ae;
 	font-size: 0.8em;
-	white-space: nowrap;
+	padding: 4px;
 }
 
 .sender {
@@ -99,10 +99,14 @@ body[data-view-type="channel"] .event .message {
 body[data-view-type="channel"] .event .time {
 	background: #ffffff;
 	color: #4271ae;
-/*	white-space: nowrap; */
 }
 
-body[data-view-type="channel"] .event .sender {
+body[data-view-type="channel"] .event .message:before {
+	content: '~ ';
+	margin-left: -2.5em;
+	margin-right: 0.5em;
+	letter-spacing: 2px;
+	color: #333; 
 }
 
 body[data-view-type="sender"] .sender {
