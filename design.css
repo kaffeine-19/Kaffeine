@@ -105,6 +105,9 @@ div.line {
 	display: -webkit-flex;
 	flex-flow: row;
 	-webkit-flex-flow: row;
+}
+
+div.line .message, .time {
     	border-top: 1px solid #d6d6d6;
 }
 
