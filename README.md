@@ -3,7 +3,7 @@ Kaffeine Textual Style
 
 Kaffeine is a light theme for the [Textual IRC client](https://www.codeux.com/textual/). It looks nice.
 
-![Screenshot](Textual.12.png?raw=true)
+![Screenshot](Textual.13.png?raw=true)
 
 ## Installing
 
