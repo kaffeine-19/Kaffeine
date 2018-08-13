@@ -4,6 +4,13 @@
 
 /* Basic Structure */
 
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  word-break: break-word;
+}
+
 body {
 	background: #ffffff;
 	color: #4d4d4c;
@@ -17,13 +24,14 @@ body {
 }
 
 a {
-	border-bottom: dotted 1px #8cb3ff;
+	border-color: #8cb3ff;
 	color: #8cb3ff;
 	text-decoration: none;
+	border-bottom: dotted 1px;
 }
 
 a:hover {
-	border-bottom: dotted 1px #8cb3ff;
+	border-color: #8cb3ff;
 }
 
 #body {
@@ -52,22 +60,27 @@ a:hover {
 
 .message {
 	width: 100%;
-    	border-top: 1px solid #d6d6d6;
+	display: block;
 }
 
-.sender {
+.time {
 	flex-shrink: 0;
-	background: #efefef;
+	background: #ffffff;
+	color: #4271ae;
+	font-size: 0.8em;
+	white-space: nowrap;
 }
 
 .sender {
 	font-weight: 600;
+	flex-shrink: 0;
 	overflow: hidden;
 	text-align: right;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: 9em;
     	border-right: 1px solid #d6d6d6;
+	background: #efefef;
 }
 
 body div.line[data-line-type=topic] span.message {
@@ -77,17 +90,14 @@ body div.line[data-line-type=topic] span.message {
     	background: #ffffff;
 }
 
-body[data-view-type="sender"] .sender {
-	display: none;
+body[data-view-type="channel"] .event .message {
+	color: #666;
+	font-size: 90%;
+	opacity: 0.6;
 }
 
-.time {
-	color: #4271ae;
-	font-size: 0.8em;
-	line-height: 1.8;
-	white-space: nowrap;
-    	border-top: 1px solid #d6d6d6;
-	-webkit-user-select: none;
+body[data-view-type="sender"] .sender {
+	display: none;
 }
 
 div.line {
@@ -95,34 +105,13 @@ div.line {
 	display: -webkit-flex;
 	flex-flow: row;
 	-webkit-flex-flow: row;
+    	border-top: 1px solid #d6d6d6;
 }
 
 div.line[data-member-type="myself"] .message,
-div.line[data-member-type="myself"] .time {
+div.line[data-member-type="myself"] .time, 
+div.line[data-member-type="myself"] .sender {
 	background: #efefef;
-}
-
-div.line[data-line-type="action"] .message
-/* div.line[data-line-type="action"] .sender */ {
-	background: none;
-	font-style: italic;
-}
-
-div.line[data-line-type="action"] .sender {
-	/* padding-right: 2px; */
-    	font-style: none;
-    	background: #efefef;
-}
-
-div.line[data-line-type="action"] .time {
-	/* padding-right: 2px; */
-    	font-style: none;
-    	background: #ffffff;
-}
-
-body[data-view-type="channel"] .event .message {
-	color: #A7ADBA;
-    	background: #ffffff;
 }
 
 /* @group Event Indicators */
@@ -173,6 +162,10 @@ div.line[data-line-type="nick"] .message {
 	color: #3E999F; /* Tomorrow: Aqua */
 }
 
+div.line[data-line-type="action"] .message {
+	font-style: italic;
+}
+
 div.line[data-line-type="action"] .message:before {
 	content: "* ";
 	color: #3E999F; /* Tomorrow: Aqua */
@@ -180,6 +173,8 @@ div.line[data-line-type="action"] .message:before {
 
 div.line[data-line-type="action"] .message:sender {
 	color: #3E999F; /* Tomorrow: Aqua */
+    	font-style: none;
+    	background: #efefef;
 }
 
 body[data-view-type="server"] .event .message {
@@ -446,6 +441,31 @@ body[data-custom-scroller="true"]::-webkit-scrollbar-thumb:hover {
 
 .message_buffer_session_indicator + #mark {
 	display: none;
+}
+
+/* Date changes */
+body div.date {
+  display: flex;
+  display: -webkit-flex;
+  padding: .5em 0;
+}
+
+body div.date > hr {
+  background: #444;
+  border: 0;
+  flex: 1;
+  height: 1px;
+  margin-top: .6em;
+  -webkit-flex: 1;
+}
+
+body div.date > span {
+  font-style: oblique;
+  margin: 0 1em;
+}
+
+body div.date + div#mark {
+  display: none;
 }
 
 /* Nickname Colors */
