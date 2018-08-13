@@ -319,6 +319,59 @@ div.line.selectedUser[data-highlight="false"]:hover .time {
 	background-color: rgba(255, 197, 143, 0.25) !important; /* Tomorrow Night Blue: Orange 25% */
 }
 
+/* Selected User */
+.sender {
+	cursor: pointer;
+}
+
+div.line[data-line-type="privmsg"]:not(.selectedUser),
+div.line[data-line-type="action"]:not(.selectedUser) {
+	transition-property: border-top, border-bottom, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+div.line[data-line-type="privmsg"] .time:not(.selectedUser),
+div.line[data-line-type="action"] .time:not(.selectedUser) {
+	transition: color 0.5s;
+}
+
+div.line.selectedUser[data-highlight="true"] .time {
+	transition: color 0.5s ease-in;
+	color: #D8DEE9;
+}
+
+div.line.selectedUser[data-highlight="true"] {
+	transition-property: color, border-top, border-bottom, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s, 0.5s;
+
+	color: #D8DEE9;
+	border: none;
+	border-left: none;
+	border-right: none;
+	outline: none;
+}
+
+div.line.selectedUser[data-highlight="true"]:hover {
+	border-color: #aa362b;
+}
+
+div.line.selectedUser[data-highlight="true"] + div.line.selectedUser[data-highlight="true"] {
+	border-top: none;
+}
+
+div.line.selectedUser[data-highlight="true"] .message,
+div.line.selectedUser[data-highlight="true"] .sender,
+div.line.selectedUser[data-highlight="true"] .time {
+	background-color: rgba(255, 157, 164, 0.25) !important; /* Tomorrow Night Blue: Red 25% */
+	color: #343D46;
+}
+
+div.line.selectedUser[data-highlight="true"]:hover .message,
+div.line.selectedUser[data-highlight="true"]:hover .sender,
+div.line.selectedUser[data-highlight="true"]:hover .time {
+	background-color: rgba(255, 197, 143, 0.25) !important; /* Tomorrow Night Blue: Orange 25% */
+}
+
 /* Remember Line */
 #mark {
 	border-bottom: 1px dashed #9f9f9f;
