@@ -84,22 +84,22 @@ a:hover {
 }
 
 body div.line[data-line-type=topic] span.message {
-        text-indent: 0;
 	color: #a5b6ce;
 	font-weight: 400;
     	background: #ffffff;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 body[data-view-type="channel"] .event .message {
 	color: #666;
 	font-size: 90%;
-	white-space: nowrap;
 }
 
 body[data-view-type="channel"] .event .time {
 	background: #ffffff;
 	color: #4271ae;
-	white-space: nowrap;
+/*	white-space: nowrap; */
 }
 
 body[data-view-type="channel"] .event .sender {
@@ -354,6 +354,8 @@ div.line.selectedUser[data-highlight="false"]:hover .time {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 /* Topic bar hover additions contributed with permission from the project:
